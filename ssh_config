@@ -1,0 +1,9 @@
+### CAEN
+
+Host caen login.engin.umich.edu cameron davis
+	Hostname login.engin.umich.edu
+	User camdav
+	ControlMaster auto
+	Controlpath ~/.ssh/_%r@%h:%p
+	ControlPersist 43200
+
