@@ -1,0 +1,141 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false,
+    "editor.cursorSurroundingLines": 15,
+    // "editor.defaultFormatter": "google.lsp",
+    // "[cpp]": {
+    //   "editor.formatOnSave": true
+    // },
+    // // "vim.disableExtension": true,
+    // "[python]": {
+    //   "editor.formatOnSave": true
+    // },
+    "editor.lineNumbers": "relative",
+    "vim.leader": ",",
+    "vim.insertModeKeyBindings": [
+      {
+          "before": ["j", "j"],
+          "after": ["<Esc>"]
+      }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["j"],
+        "after": ["h"]
+    },
+    {
+      "before": ["k"],
+      "after": ["j"]
+    },
+    {
+      "before": ["l"],
+      "after": ["k"]
+    },
+    {
+      "before": [";"],
+      "after": ["l"]
+    },
+    {
+      "before": ["<Up>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Down>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Left>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Right>"],
+      "after": ["<Nop>"]
+    },
+    {
+    "before": ["<Leader>", "o"],
+    "after": ["o", "<Esc>"]
+    },
+    {
+      "before": ["<Leader>", "O"],
+      "after": ["O", "<Esc>"]
+    },
+    {
+      "before" : ["<Leader>","ff"],
+      "commands" : [
+        "workbench.view.explorer"
+      ],
+    },
+  ], 
+  "vim.visualModeKeyBindings": [
+  {
+      "before": [
+          ">"
+      ],
+      "commands": [
+            "editor.action.indentLines"
+        ]
+    },
+    {
+        "before": [
+            "<"
+        ],
+        "commands": [
+            "editor.action.outdentLines"
+        ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["h"]
+    },
+    {
+      "before": ["k"],
+      "after": ["j"]
+    },
+    {
+      "before": ["l"],
+      "after": ["k"]
+    },
+    {
+      "before": [";"],
+      "after": ["l"]
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+        "before": [":"],
+        "commands": [
+            "workbench.action.showCommands",
+        ],
+        "silent": true
+    },
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#FF79C6", "#000000"],
+  "vim.statusBarColors.insert": "#BD93F9",
+  "vim.statusBarColors.visual": "#85E3FF",
+  "vim.statusBarColors.visualline": "#002733",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#FFABAB",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogrvessmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#002733",
+    "statusBar.noFolderBackground": "#002733",
+    "statusBar.debuggingBackground": "#002733",
+    "statusBar.foreground": "#000000",
+    "statusBar.debuggingForeground": "#000000"
+  },
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "ee3739525a995bcb5601621a6e2daec1f183bbefc375743acc235cec33547e04",
+      "allowed": true
+    }
+  ],
+  "git.ignoreMissingGitWarning": true,
+  }
