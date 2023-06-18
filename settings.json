@@ -1,23 +1,37 @@
 {
     "workbench.colorTheme": "Dracula",
-    "editor.formatOnType": false,
-    "editor.formatOnSave": false,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
     "editor.cursorSurroundingLines": 15,
-    // "editor.defaultFormatter": "google.lsp",
-    // "[cpp]": {
-    //   "editor.formatOnSave": true
-    // },
-    // // "vim.disableExtension": true,
-    // "[python]": {
-    //   "editor.formatOnSave": true
-    // },
+    "[cpp]": {
+      "editor.formatOnSave": true
+    },
+    "[python]": {
+      "editor.formatOnSave": true
+    },
+    "vim.showMarksInGutter": true,
     "editor.lineNumbers": "relative",
     "vim.leader": ",",
     "vim.insertModeKeyBindings": [
       {
           "before": ["j", "j"],
           "after": ["<Esc>"]
-      }
+      },
+      {
+        "before": ["<Leader>", "q"],
+        "after": ["C-o"]
+      },
+      {
+        "before": ["<Leader>", "p"],
+        "after": ["C-r", "0"]
+      },
+  ],
+  "vim.commandLineModeKeyBindingsNonRecursive": [
+    // Change :W to :w in case of typo in trying to save
+    {
+        "before": ["W"],
+        "after": ["w"]
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -61,10 +75,33 @@
       "after": ["O", "<Esc>"]
     },
     {
-      "before" : ["<Leader>","ff"],
+      "before" : ["<Leader>", "f"],
       "commands" : [
         "workbench.view.explorer"
       ],
+    },
+    {
+      // nmap Y y$
+      "before": ["Y"],
+      "after": ["y", "$"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "after": ["\"", "0", "p"]
+    },
+    {
+        "before": ["<Leader>", "<Space>"],
+        "commands": [
+            "workbench.action.showCommands",
+        ],
+        "silent": true
+    },
+    {
+        "before": ["<Leader>", "b"],
+        "commands": [
+            "workbench.action.toggleSidebarVisibility",
+        ],
+        "silent": true
     },
   ], 
   "vim.visualModeKeyBindings": [
@@ -104,13 +141,12 @@
     },
   ],
   "vim.normalModeKeyBindings": [
-    {
-        "before": [":"],
-        "commands": [
-            "workbench.action.showCommands",
-        ],
-        "silent": true
-    },
+    // Website of all keybinds: https://code.visualstudio.com/docs/getstarted/keybindings#:~:text=You%20can%20view%20the%20currently,%3E%20Preferences%20%3E%20Keyboard%20Shortcuts).
+    // Useful keybinds:
+    // Toggle Terminal: cmd + j
+    // Toggle sidebar: cmd + b
+    // Split terminal/editor: cmd + \
+
   ],
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#FF79C6", "#000000"],
