@@ -77,7 +77,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins+=(git)
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+plugins+=(zsh-autosuggestions)
+plugins+=(tmux)
+plugins+=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,6 +115,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Fzf keybindings
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="${PATH}:${HOME}/bin"
+
 # Cameron Keybinds
 c() { cd "$@" && ls; }
 
@@ -122,14 +132,12 @@ alias quit="exit"
 
 alias _zshrc="vim ~/.zshrc"
 alias _reload_zshrc="source ~/.zshrc"
-
-alias _vimrc="vim ~/.vimrc"
+alias c..="c .."
+alias _zshrc="code ~/.zshrc &> /dev/null || vim ~/.zshrc"
+alias _vimrc="code ~/.vimrc || vim ~/.vimrc"
 
 # Turn off bell
 unsetopt BEEP
 
-plugins=(
-docker
-zsh-syntax-highlighting
-zsh-autosuggestions
-)
+# ZSH autosuggest
+bindkey '^f' autosuggest-execute
