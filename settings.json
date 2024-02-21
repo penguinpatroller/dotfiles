@@ -1,155 +1,115 @@
 {
-    "workbench.colorTheme": "Dracula",
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "editor.cursorSurroundingLines": 15,
-    "[cpp]": {
-      "editor.formatOnSave": true
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "editor.cursorSurroundingLines": 15,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  // "[cpp]": {
+  //   "editor.formatOnSave": true
+  // },
+  // "[python]": {
+  //   "editor.formatOnSave": true
+  // },
+  "vim.showMarksInGutter": true,
+  "editor.lineNumbers": "relative",
+  "vim.leader": ",",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
-    "[python]": {
-      "editor.formatOnSave": true
+    {
+      "before": [
+        "<Leader>",
+        "q"
+      ],
+      "after": [
+        "C-o"
+      ]
     },
-    "vim.showMarksInGutter": true,
-    "editor.lineNumbers": "relative",
-    "vim.leader": ",",
-    "vim.insertModeKeyBindings": [
-      {
-          "before": ["j", "j"],
-          "after": ["<Esc>"]
-      },
-      {
-        "before": ["<Leader>", "q"],
-        "after": ["C-o"]
-      },
-      {
-        "before": ["<Leader>", "p"],
-        "after": ["C-r", "0"]
-      },
+    {
+      "before": [
+        "<Leader>",
+        "p"
+      ],
+      "after": [
+        "C-r",
+        "0"
+      ]
+    },
   ],
   "vim.commandLineModeKeyBindingsNonRecursive": [
     // Change :W to :w in case of typo in trying to save
     {
-        "before": ["W"],
-        "after": ["w"]
+      "before": [
+        "W"
+      ],
+      "after": [
+        "w"
+      ]
     },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-        "before": ["j"],
-        "after": ["h"]
-    },
-    {
-      "before": ["k"],
-      "after": ["j"]
-    },
-    {
-      "before": ["l"],
-      "after": ["k"]
-    },
-    {
-      "before": [";"],
-      "after": ["l"]
-    },
-    {
-      "before": ["<Up>"],
-      "after": ["<Nop>"]
-    },
-    {
-      "before": ["<Down>"],
-      "after": ["<Nop>"]
-    },
-    {
-      "before": ["<Left>"],
-      "after": ["<Nop>"]
-    },
-    {
-      "before": ["<Right>"],
-      "after": ["<Nop>"]
-    },
-    {
-    "before": ["<Leader>", "o"],
-    "after": ["o", "<Esc>"]
-    },
-    {
-      "before": ["<Leader>", "O"],
-      "after": ["O", "<Esc>"]
-    },
-    {
-      "before" : ["<Leader>", "f"],
-      "commands" : [
-        "workbench.view.explorer"
-      ],
-    },
-    {
-      // nmap Y y$
-      "before": ["Y"],
-      "after": ["y", "$"]
-    },
-    {
-      "before": ["<Leader>", "p"],
-      "after": ["\"", "0", "p"]
-    },
-    {
-        "before": ["<Leader>", "<Space>"],
-        "commands": [
-            "workbench.action.showCommands",
-        ],
-        "silent": true
-    },
-    {
-        "before": ["<Leader>", "b"],
-        "commands": [
-            "workbench.action.toggleSidebarVisibility",
-        ],
-        "silent": true
-    },
-  ], 
+    { "before": ["j"], "after": ["h"] },
+    { "before": ["k"], "after": ["j"] },
+    { "before": ["l"], "after": ["k"] },
+    { "before": [";"], "after": ["l"] },
+    { "before": ["<Up>"], "after": ["<Nop>"] },
+    { "before": ["<Down>"], "after": ["<Nop>"] },
+    { "before": ["<Left>"], "after": ["<Nop>"] },
+    { "before": ["<Right>"], "after": ["<Nop>"] },
+    { "before": ["<Leader>", "o"], "after": ["o", "<Esc>"] },
+    { "before": ["<Leader>", "O"], "after": ["O", "<Esc>"] },
+    { "before": ["<Leader>", "f"], "after": ["workbench.view.explorer"] },
+    { "before": ["<Leader>", "b"], "after": ["workbench.action.toggleSidebarVisibility"] },
+    { "before": ["<Leader>", "<Space>"], "after": ["workbench.action.showCommands"], "silent": true},
+    { "before": ["<Leader>", "p"], "after": ["\"", "0", "p"] },
+    { "before": ["Y"], "after": ["y", "$"] },
+    //{ "before": ["g"], "after": ["G"] },
+  ],
   "vim.visualModeKeyBindings": [
-  {
+    {
       "before": [
-          ">"
+        ">"
       ],
       "commands": [
-            "editor.action.indentLines"
-        ]
+        "editor.action.indentLines"
+      ]
     },
     {
-        "before": [
-            "<"
-        ],
-        "commands": [
-            "editor.action.outdentLines"
-        ]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["j"],
-      "after": ["h"]
-    },
-    {
-      "before": ["k"],
-      "after": ["j"]
-    },
-    {
-      "before": ["l"],
-      "after": ["k"]
-    },
-    {
-      "before": [";"],
-      "after": ["l"]
-    },
+    { "before": ["j"], "after": ["h"] },
+    { "before": ["k"], "after": ["j"] },
+    { "before": ["l"], "after": ["k"] },
+    { "before": [";"], "after": ["l"] },
   ],
   "vim.normalModeKeyBindings": [
     // Website of all keybinds: https://code.visualstudio.com/docs/getstarted/keybindings#:~:text=You%20can%20view%20the%20currently,%3E%20Preferences%20%3E%20Keyboard%20Shortcuts).
     // Useful keybinds:
     // Toggle Terminal: cmd + j
     // Toggle sidebar: cmd + b
+    // Toggle terminal max size: cmd + m
     // Split terminal/editor: cmd + \
-
   ],
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#FF79C6", "#000000"],
+  "vim.statusBarColors.normal": [
+    "#FF79C6",
+    "#000000"
+  ],
   "vim.statusBarColors.insert": "#BD93F9",
   "vim.statusBarColors.visual": "#85E3FF",
   "vim.statusBarColors.visualline": "#002733",
@@ -174,4 +134,9 @@
     }
   ],
   "git.ignoreMissingGitWarning": true,
-  }
+  "workbench.colorTheme": "Dracula",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "terminal.integrated.fontFamily": "meslolgs nf",
+}
+
