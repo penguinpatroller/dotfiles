@@ -120,6 +120,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="${PATH}:${HOME}/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 
 # Cameron Keybinds
 c() { cd "$@" && ls; }
@@ -141,3 +142,30 @@ unsetopt BEEP
 
 # ZSH autosuggest
 bindkey '^f' autosuggest-execute
+
+# Blinking cursor
+echo -ne "\e[1 q"
+
+# Color output of man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+export BAT_THEME="Dracula"
+
+# Alias for ls to exa
+alias l="exa -l"
+alias ls="exa"
+alias la="exa -ah"
+alias ll="exa -ahl"
+alias tree="exa --tree --icons"
+# alias cat="bat" # Note: disabled due to not being able to copy the contents of bat without line numbers.
+alias grep="rg"
+alias find="fdfind"
+alias hd="hexyl"
+
+alias _zshrc="nvim ~/.zshrc"
+
+# Alias for viewing and editing vimrc
+alias _vimrc="nvim ~/.vimrc"
+
+# Alias to reload changes made to this file
+alias _reload_zshrc="source ~/.zshrc"
