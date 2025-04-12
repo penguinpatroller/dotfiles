@@ -41,6 +41,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
+
+bindkey "\e[1;9C" forward-word
+bindkey "\ef" forward-word
+
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
@@ -79,6 +85,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins+=(git)
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+plugins+=(fzf)
+plugins+=(fzf-tab)
 plugins+=(zsh-autosuggestions)
 plugins+=(tmux)
 plugins+=(zsh-syntax-highlighting)
@@ -122,6 +130,10 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 export PATH="${PATH}:${HOME}/bin"
 export PATH="${PATH}:${HOME}/.local/bin"
 
+# Make sure to install this dependency, or remove if it doesn't work.
+# Syntax Highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Cameron Keybinds
 c() { cd "$@" && ls; }
 
@@ -150,6 +162,9 @@ echo -ne "\e[1 q"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 export BAT_THEME="Dracula"
+export BAT_PAGER="less -I"
+# Use nvim as man pager
+export MANPAGER="nvim +Man!"
 
 # Alias for ls to exa
 alias l="exa -l"
@@ -169,3 +184,6 @@ alias _vimrc="nvim ~/.vimrc"
 
 # Alias to reload changes made to this file
 alias _reload_zshrc="source ~/.zshrc"
+
+# 24 bit color support
+set termguicolors
